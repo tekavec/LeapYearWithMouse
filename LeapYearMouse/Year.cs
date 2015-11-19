@@ -11,19 +11,24 @@
 
         public bool IsLeapYear()
         {
-            if (_year%100 == 0)
+            if (IsDivisibleBy(100))
             {
-                if (_year%400 == 0)
+                if (IsDivisibleBy(400))
                 {
                     return true;
                 }
                 return false;
             }
-            if (_year%4 == 0)
+            if (IsDivisibleBy(4))
             {
                 return true;
             }
             return false;
+        }
+
+        private bool IsDivisibleBy(int value)
+        {
+            return _year%value == 0;
         }
     }
 }
