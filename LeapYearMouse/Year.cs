@@ -11,19 +11,7 @@
 
         public bool IsLeapYear()
         {
-            if (IsDivisibleBy(100))
-            {
-                if (IsDivisibleBy(400))
-                {
-                    return true;
-                }
-                return false;
-            }
-            if (IsDivisibleBy(4))
-            {
-                return true;
-            }
-            return false;
+            return IsDivisibleBy(IsDivisibleBy(100) ? 400 : 4);
         }
 
         private bool IsDivisibleBy(int value)
