@@ -21,5 +21,11 @@ namespace LeapYearMouse
         {
             Assert.IsTrue(new Year(1600).IsLeapYear());
         }
+
+        [Test]
+        public void not_be_a_leap_year_if_it_is_divisible_by_100_but_not_by_400()
+        {
+            Assert.IsFalse(new Year(1800).IsLeapYear());
+        }
     }
 }
