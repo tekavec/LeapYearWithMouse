@@ -2,12 +2,19 @@
 {
     public class Year
     {
+        private readonly int _year;
+
         public Year(int year)
         {
+            _year = year;
         }
 
         public bool IsLeapYear()
         {
+            if (_year%4 == 0)
+            {
+                return true;
+            }
             return false;
         }
     }
